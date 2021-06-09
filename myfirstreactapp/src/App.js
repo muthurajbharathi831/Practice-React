@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import Comp1 from './Components/Comp1/Comp1';
+import ClassComp from './Components/ClassComp/ClassComponent'
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+
+import HeaderComp from './Components/ClassComp/HeaderComp'
+import Content from './Components/ClassComp/Content'
+import Footer from './Components/ClassComp/Footer'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> This is Default Component by React
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HeaderComp/>
+      <Content/>
+      <Content/>
+      <Content/>
+      
+      <Comp1/>
+      <ClassComp/>
+      <Footer/>
     </div>
   );
 }
