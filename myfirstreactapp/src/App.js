@@ -8,16 +8,14 @@ import HeaderComp from './Components/ClassComp/HeaderComp'
 import Content from './Components/ClassComp/Content'
 import Footer from './Components/ClassComp/Footer'
 
+import StateComp from './Components/ClassComp/StateComp/StateComp'
+
 function App() {
   return (
     <div className="App">
       <HeaderComp/>
-      <Content/>
-      <Content/>
-      <Content/>
-      
-      <Comp1/>
-      <ClassComp/>
+     
+      <StateComp/>
       <Footer/>
     </div>
   );

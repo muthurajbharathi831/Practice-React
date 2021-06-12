@@ -13,9 +13,9 @@ class Footer extends React.Component {
     Featured
   </div>
   <div class="card-body">
-    <h5 class="card-title">copyright @ 2021</h5>
+    <h5 class="card-title">Copyright @ 2021</h5>
     <p class="card-text">This is footer</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    
   </div>
 </div>
         )
