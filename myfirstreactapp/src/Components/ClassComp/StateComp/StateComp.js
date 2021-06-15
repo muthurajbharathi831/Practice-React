@@ -14,15 +14,13 @@ class StateComp extends Component {
     updateState = () => {
         Axios.get("https://jsonplaceholder.typicode.com/users").then((response) => {
             
-                console.log(response.data[0]);
-                this.setState({
-                    data: response.data[0]
-                })
-            
+            console.log(response.data[0]);
+            this.setState({
+                data: response.data
+            })
         },(errorMsg)=>{
             console.log(errorMsg);
         })
-        
     }
     
     render (){
@@ -41,7 +39,8 @@ class StateComp extends Component {
                 <p>Name from Json Placeholder : {this.state.data.name}</p>
                 <p>UserName from Json Placeholder : {this.state.data.username}</p> */}
                 
-                {this.state.data && <p>Name from Json Placeholder :  {this.state.data.name}</p>}
+                <p>Name from Json Placeholder :  {this.state.data.name}</p>
+                
                 <button class= "btn btn-primary" onClick={this.updateState}>Update</button>
             </div>
         )

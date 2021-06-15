@@ -9,14 +9,16 @@ import Content from './Components/ClassComp/Content'
 import Footer from './Components/ClassComp/Footer'
 
 import StateComp from './Components/ClassComp/StateComp/StateComp'
+import Acomp from './Components/ClassComp/ComponentsRelation/A'
 
 function App() {
   return (
     <div className="App">
-      <HeaderComp/>
+      {/* <HeaderComp/>
      
       <StateComp/>
-      <Footer/>
+      <Footer/> */}
+      <Acomp/>
     </div>
   );
 }
