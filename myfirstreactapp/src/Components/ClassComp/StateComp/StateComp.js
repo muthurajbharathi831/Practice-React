@@ -40,7 +40,7 @@ class StateComp extends Component {
                 <p>UserName from Json Placeholder : {this.state.data.username}</p> */}
                 
                 <p>Name from Json Placeholder :  {this.state.data.name}</p>
-                
+                  
                 <button class= "btn btn-primary" onClick={this.updateState}>Update</button>
             </div>
         )

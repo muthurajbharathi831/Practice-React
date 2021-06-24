@@ -11,6 +11,14 @@ import Footer from './Components/ClassComp/Footer'
 import StateComp from './Components/ClassComp/StateComp/StateComp'
 import Acomp from './Components/ClassComp/ComponentsRelation/A'
 
+import Parent from './Components/ChildtoParent/Parent'
+
+import A from './Components/NestedParenttoChild/A'
+
+import ChildtoParentDataPassDemo from './Components/ChildtoParent/Parent'
+
+import ContextApiDemo from './Components/ContextApi/A'
+
 function App() {
   return (
     <div className="App">
@@ -18,7 +26,11 @@ function App() {
      
       <StateComp/>
       <Footer/> */}
-      <Acomp/>
+      {/* <Acomp/> */}
+      {/* <Parent/> */}
+      {/* <A/> */}
+      {/* <ChildtoParentDataPassDemo/> */}
+      <ContextApiDemo/>
     </div>
   );
 }
