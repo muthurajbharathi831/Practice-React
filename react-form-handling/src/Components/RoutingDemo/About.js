@@ -6,7 +6,7 @@ class About extends React.Component {
     }
 
     render(){
-        return <div class="container">
+        return <div className="container">
             <p>This is About Component</p>
         </div>
     }
