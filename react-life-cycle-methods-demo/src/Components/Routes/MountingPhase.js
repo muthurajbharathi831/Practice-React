@@ -15,7 +15,7 @@ class MountingPhase extends React.Component {
 
     render(){
         console.log('This is Render');
-        return <div class = "container">
+        return <div className = "container">
             <p>This is Mounting Phase</p>
         </div>
     }

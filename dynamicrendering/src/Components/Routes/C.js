@@ -16,7 +16,7 @@ class C extends React.Component {
                     {
                         (contextdata) => {
                             console.log(contextdata.userdata);
-                            contextdata.userdata.map((item,index)=>{
+                            return contextdata.userdata.map((item,index)=>{
                                 return <div className = "col-sm-4">
                                     <div className="card" >
                                             <div className="card-body">

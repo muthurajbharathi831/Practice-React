@@ -1,9 +1,7 @@
 import React from 'react'
 
 class UpdatePhase extends React.Component {
-    static getDerivedStateFromProps(){
-        console.log('This is getDerivedStateFromProps');
-    }
+    
 
     shouldComponentUpdate (){
         console.log('This is Should component update');
@@ -18,6 +16,9 @@ class UpdatePhase extends React.Component {
             name:"Muthu"
         }
     }
+    static getDerivedStateFromProps(){
+        console.log('This is getDerivedStateFromProps');
+    }
 
     updateName = () => {
         console.log('This is updateName');
@@ -26,9 +27,9 @@ class UpdatePhase extends React.Component {
 
     render(){
         console.log('This is Render');
-        return <div class= "container">
+        return <div className= "container">
             <p>This is Update Phase</p>
-            <button class = "btn btn-primary" onClick = {this.updateName}>Update state</button>
+            <button className = "btn btn-primary" onClick = {this.updateName}>Update state</button>
         </div>
     }
 

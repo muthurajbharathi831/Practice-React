@@ -28,7 +28,7 @@ class B extends React.Component {
                     {
                         (contextData) => {
                             console.log(contextData.userdata);
-                            contextData.userdata.map((item,index) => {
+                            return contextData.userdata.map((item,index) => {
                                     return  <tr>
                                                 <td>{item.address.street}</td>
                                                 <td>{item.address.suite}</td>

@@ -13,7 +13,7 @@ class Main extends React.Component {
     }
 
     render(){
-        return <div class = "container">
+        return <div className = "container">
             <BrowserRouter>
                 <Navbar/>
                 <Switch>
