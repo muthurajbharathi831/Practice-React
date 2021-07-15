@@ -2,6 +2,7 @@ import React from 'react'
 import $ from 'jquery';
 import axios from 'axios'
 import myAction from '../../Action/Action'
+import myAction2 from '../../Action2/Action2'
 
 class Home extends React.Component {
     constructor(){
@@ -9,7 +10,9 @@ class Home extends React.Component {
         this.state = {
             name : "",
             city: "",
-            userdata : []
+            userdata : [],
+            photos : [],
+            posts : []
         }
     }
 
@@ -141,7 +144,25 @@ class Home extends React.Component {
             this.setState({
                 userdata : response.data
             })
-            myAction(response.data)
+            myAction(response.data,"USER")
+        },(error)=>{
+            console.log("Error "+error);
+        })
+
+        axios.get("https://jsonplaceholder.typicode.com/photos").then((response)=>{
+            this.setState({
+                photos : response.data
+            })
+            myAction2(response.data)
+        },(error)=>{
+            console.log("Error "+error);
+        })
+
+        axios.get("https://jsonplaceholder.typicode.com/comments").then((response)=>{
+            this.setState({
+                posts : response.data
+            })
+            myAction(response.data,"POST")
         },(error)=>{
             console.log("Error "+error);
         })

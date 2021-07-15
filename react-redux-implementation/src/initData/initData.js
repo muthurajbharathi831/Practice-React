@@ -1,6 +1,6 @@
-var data = {
+let initData = {
     user : [],
-    post : []
+    posts : []
 }
 
-export default data;
+export default initData;

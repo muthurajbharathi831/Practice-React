@@ -1,10 +1,9 @@
 import React from 'react'
-import Axios from 'axios'
-
+import {connect} from 'react-redux'
 
 class Comments extends React.Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
 
         this.state = {
             userComments : []
@@ -23,6 +22,7 @@ class Comments extends React.Component {
                             return  <div className ="col-sm-4 mt-5">
                                         <div className="card" >
                                             <div className="card-body">
+                                                <h5 className="card-title">{item.id}</h5>
                                                 <h5 className="card-title">{item.name}</h5>
                                                 <h6 className="card-subtitle mb-2 text-muted">{item.email}</h6>
                                                 <p className="card-text">{item.body}</p>
@@ -38,14 +38,16 @@ class Comments extends React.Component {
     }
 
     componentDidMount(){
-        Axios.get("https://jsonplaceholder.typicode.com/comments").then((response) => {
-            this.setState({
-                userComments : response.data
-            })
-        },(error)=> {
-            console.log(`Error ${error}`);
+        this.setState({
+            userComments : this.props.post
         })
     }
 }
 
-export default Comments;
+const mapStatetoProps = (storeData) => {
+    return {
+        post : storeData.myReducer.posts
+    }
+}
+
+export default connect(mapStatetoProps)(Comments);

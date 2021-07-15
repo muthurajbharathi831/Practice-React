@@ -1,27 +1,25 @@
 import React from 'react'
 
-const Hoc = (Comp,args) => {
-    class HigherOrderComp extends React.Component {
-        constructor (props){
-            super(props)
+const myHoc = (Comp,args) => {
+    class myHocImpl extends React.Component {
+        constructor(){
+            super()
             this.state = {
+                name : args.name,
                 count : args.counter
             }
         }
-
-        updateState = ()=> {
-            console.log("called ",args.counter);
-            console.log("count "+this.state.count);
+        update = ()=> {
             this.setState({
                 count : this.state.count + 1
             })
         }
 
-        render() {
-            return <Comp componentName = {args.name} count = {this.state.count} countInit = {args.counter} update = {this.updateState}/>
+        render(){
+            return <Comp name = {this.state.name} count = {this.state.count} update = {this.update}/>
         }
     }
-    return HigherOrderComp
+    return myHocImpl;
 }
 
-export default Hoc;
+export default myHoc;

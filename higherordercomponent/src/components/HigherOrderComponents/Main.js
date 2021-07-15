@@ -3,7 +3,7 @@ import React from 'react'
 import {BrowserRouter,Switch,Route} from 'react-router-dom'
 import Navbar from './Navbar'
 import Home from './A'
-import Parentwithhoc from './Parentwithhoc'
+
 import HocDemo from './Parentwithhoc'
 
 class Main extends React.Component {

@@ -1,34 +1,27 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Childwithhoc from './Childwithhoc'
-import Hoc from './Hoc'
+import myHoc from './Hoc'
 
-class Parentwithhoc extends Component {
-    constructor(props) {
+class Parentwithhoc extends React.Component {
+    constructor(props){
         super(props)
-    
+
         this.state = {
-             
+            name : '',
+            count : 0
         }
     }
-    
-    render() {
-        return (
-            <div className = "container mt-5">
-                <div className = "row ">
-                <h3>Higher Order Component State Counter Demo</h3>
 
-                    <div className = "col-sm-12">
-                        <button onClick = {this.props.update} >{this.props.componentName} Clicked me {this.props.count}</button>
-                    </div>
-                </div>
-                <Childwithhoc/>
-            </div>
+    render (){
+        return <div className = "container mt-5 ">
+            <button className = "btn btn-primary" onClick = {this.props.update}>{this.props.name} Clicked me {this.props.count} times</button>
+            <Childwithhoc/>
+        </div>
 
-        )
     }
 }
 
-export default Hoc(Parentwithhoc,{
-    name:"Button click component for HOC demo",
-    counter: 20
-})
+export default myHoc(Parentwithhoc,{
+    name : "Button Click demo",
+    counter : 21
+});

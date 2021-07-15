@@ -1,6 +1,6 @@
 import React from 'react'
 import Axios from 'axios'
-
+import myStore from '../../Store/Store'
 
 
 class GetData extends React.Component {
@@ -19,6 +19,9 @@ class GetData extends React.Component {
                        <table >
                         <thead className = "bg-dark text-white">
                             <tr>
+                            <th>
+                                    Website
+                                </th>
                                 <th>
                                     Name
                                 </th>
@@ -31,15 +34,18 @@ class GetData extends React.Component {
                                 <th>
                                     Company Name
                                 </th>
+                               
                             </tr>
                         </thead>
                         <tbody> {
                             this.state.userdata.map((item,index)=> {
                                 return  <tr className = "text-blue">
+                                            <td> {item.website}</td>
                                             <td> {item.name}</td>
                                             <td> {item.email}</td>
                                             <td> {item.address.city}</td>
                                             <td> {item.company.name}</td>
+                                            
                                         </tr>         
                             })
                         }
@@ -54,12 +60,8 @@ class GetData extends React.Component {
     }
 
     componentDidMount(){
-        Axios.get("https://jsonplaceholder.typicode.com/users").then((response) => {
-            this.setState({
-                userdata :response.data
-            })
-        },(error) => {
-            console.log(`Error is ${error}`);
+        this.setState({
+            userdata : myStore.getState().myReducer.user
         })
     }
 }
