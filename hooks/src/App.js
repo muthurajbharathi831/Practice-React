@@ -7,6 +7,10 @@ import ParentComponent from '../src/Components/A'
 import Loginform from '../src/Components/Login'
 
 import UseEffectHook from '../src/Components/UseEffecthook'
+import UseEffectdemo from '../src/Components/UseEffectdemo'
+import UseContext from '../src/Components/UseContext'
+import UseRefdemo from '../src/Components/UseRef'
+import UseReducerdemo from '../src/Components/UseReducer'
 
 function App() {
   return (
@@ -14,7 +18,11 @@ function App() {
       {/* <Hooksdemo/>
       <ParentComponent/>
       <Loginform/> */}
-      <UseEffectHook/>
+       {/* <UseEffectHook/>  */}
+      {/* <UseEffectdemo/> */}
+      {/* <UseContext/> */}
+      {/* <UseRefdemo/> */}
+      <UseReducerdemo/>
     </div>
   );
 }
