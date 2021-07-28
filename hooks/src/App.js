@@ -11,6 +11,8 @@ import UseEffectdemo from '../src/Components/UseEffectdemo'
 import UseContext from '../src/Components/UseContext'
 import UseRefdemo from '../src/Components/UseRef'
 import UseReducerdemo from '../src/Components/UseReducer'
+import UsecallbackUsecase from '../src/Components/UsecallbackUsecase/Home'
+import UsecallbackDemo from '../src/Components/UsecallbackDemo/Home'
 
 function App() {
   return (
@@ -22,7 +24,9 @@ function App() {
       {/* <UseEffectdemo/> */}
       {/* <UseContext/> */}
       {/* <UseRefdemo/> */}
-      <UseReducerdemo/>
+      {/* <UseReducerdemo/> */}
+      {/* <UsecallbackUsecase/> */}
+      <UsecallbackDemo/>
     </div>
   );
 }

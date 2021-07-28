@@ -36,4 +36,4 @@ const mapStatetoProps = (storeData) => {
     }
 }
 
-export default connect(mapStatetoProps)(Userdetails)
+export default connect(mapStatetoProps,null)(Userdetails)

@@ -50,4 +50,4 @@ const mapStatetoProps = (storeData) => {
     }
 }
 
-export default connect(mapStatetoProps)(Comments);
+export default connect(mapStatetoProps,null)(Comments);
