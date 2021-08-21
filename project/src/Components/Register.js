@@ -174,7 +174,7 @@ class Register extends React.Component {
                         <div style = {{fontSize:10,color:"red",fontWeight:"bold",fontStyle:"italic"}}>{this.state.passwordErr}</div>
 
                     </div>
-                    <select class="form-select" aria-label="Default select example" name = "code" value = {this.state.code} onChange = {this.handleCommonValuesUpdate}>
+                    <select className="form-select" aria-label="Default select example" name = "code" value = {this.state.code} onChange = {this.handleCommonValuesUpdate}>
                         <option value = "" selected>Open this select menu</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -206,7 +206,7 @@ class Register extends React.Component {
                             name = "course2"
                             checked = {this.state.course2}
                             onChange = {this.handleCommonValuesUpdate}
-                            checked
+                            
                         />
                         <label className="form-check-label" >
                             Checked checkbox
@@ -253,7 +253,7 @@ class Register extends React.Component {
                             checked = {this.state.radio === "M"}
 
                             id="flexRadioDefault2" 
-                            checked
+                            
                         />
                         <label className="form-check-label" > 
                             Default checked radio
